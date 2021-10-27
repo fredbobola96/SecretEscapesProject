@@ -1,7 +1,5 @@
 package BankSystem;
 
-import java.util.HashMap;
-
 public class AccountTransferLogic
 {
 
@@ -11,9 +9,7 @@ public class AccountTransferLogic
     Account John = new Account("John", 200.0, "johndoe@example.com");
     Account Chris = new Account("Chris", 200.0, "chrisjones@example.com");
 
-    HashMap<Account, Double> accountHolderBalanceMap = new HashMap<Account, Double>();
-
-    public AccountTransferLogic(String sender, String receiver, Double amount)
+    public AccountTransferLogic()
     {}
 
     public void performLogic(String selectedSender, String selectedReceiver, Double selectedAmount)
@@ -23,6 +19,9 @@ public class AccountTransferLogic
             if(selectedReceiver.equalsIgnoreCase(selectedSender))
             {
                 System.err.println("Cannot send money to the same account");
+                System.err.println("Transaction Unsuccessful! " + stringToAccount(selectedSender).getName()+ " has Insufficient Funds!");
+                System.out.println(stringToAccount(selectedSender).getName() + "'s balance is £" + stringToAccount(selectedSender).getBalance());
+                System.exit(0);
             }
             else
             {
