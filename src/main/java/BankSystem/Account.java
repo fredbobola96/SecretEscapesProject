@@ -13,36 +13,28 @@ public class Account
         this.emailAddress = emailAddress;
     }
 
+    //return current account balance
     public double getBalance()
     {
         return balance;
     }
 
+    //return account name
     public String getName()
     {
         return this.name;
     }
 
+    //return account email address
     public String getEmailAddress()
     {
         return emailAddress;
     }
 
+    //Return String of account details
     public  String getDetails()
     {
-        return name + " " + "  Email address: " + emailAddress + " Balance: £" + balance;
-    }
-
-    public double withdraw(double amount)
-    {
-        if (getBalance() > 0 && getBalance() > amount)
-        {
-            balance = getBalance() - amount;
-        } else
-        {
-            System.out.println("Insufficient Funds");
-        }
-        return balance;
+        return "Name: " + name + " Email address: " + emailAddress + " Balance: £" + balance;
     }
 
     //name = person receiving money

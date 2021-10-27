@@ -14,9 +14,7 @@ public class AccountTransferLogic
     HashMap<Account, Double> accountHolderBalanceMap = new HashMap<Account, Double>();
 
     public AccountTransferLogic(String sender, String receiver, Double amount)
-    {
-
-    }
+    {}
 
     public void performLogic(String selectedSender, String selectedReceiver, Double selectedAmount)
     {
